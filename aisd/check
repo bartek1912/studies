@@ -1,4 +1,0 @@
-for((i=7; $i <= 100; i++)); do 
-	./b < "test/$i.in" > out.txt
-	diff out.txt "test/$i.out"
-done
