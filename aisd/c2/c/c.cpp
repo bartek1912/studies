@@ -64,39 +64,16 @@ void solve(int p, int k, const vector<int>& byY)//y, id
       }
    }
 }
-/*
-int getInt()
-{
-   char c = getchar();
-   while((c < '0' || c > '9') && c != '-')
-      c = getchar();
-   bool neg = c == '-';
-   if(neg) c = getchar();
-   int res = 0;
-   while(c >= '0' && c <= '9') {
-      res = res*10 + c - '0';
-      c = getchar();
-   }
-   return (neg ? -res: res);
-}*/
 
 int main() {
-   ios::sync_with_stdio(0);
-   int t = 1;
-   //scanf("%d", &t);
-   REP(i,t) {
    best = INF;
    scanf("%d", &n);
-   //n = getInt();
    vector<int> tmp;
    vector<pair<int, int> > byY;
    byY.reserve(n);
    tmp.reserve(n);
    REP(i, n){
-    //  cin>>byX[i].first>>byX[i].second;
       scanf("%d %d", &byX[i].first, &byX[i].second);
-    //     byX[i].first = getInt();
-    //     byX[i].second = getInt();
    }
    sort(byX, byX + n);
    REP(i, n)
@@ -108,8 +85,6 @@ int main() {
    solve(0, n, tmp);
    REP(i,3)
       printf("%d %d\n", byX[res[i]].first, byX[res[i]].second);
-      //cout<<byX[res[i]].first<<" "<<byX[res[i]].second<<"\n";
-   //printf("Case #%d: %.15f\n", (i+1), best);
-   }
    return 0;
 }
+
